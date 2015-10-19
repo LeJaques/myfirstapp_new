@@ -1,43 +1,36 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-<h1>Log in</h1>
-</div>
-
-<div id="bg3">
-  <img src="https://ununsplash.imgix.net/uploads/1412238370909393b4a19/79f023f1?q=75&fm=jpg&s=0d39e32b84bfacd752f109035a811830" alt="">
+  <h1>Log in</h1>
   </div>
-
-   <div class="panel-body">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="panel-body">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+  
 
-      <div class="form-group">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
-      </div>
-
-    <div class="form-group">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-      </div>
-
-      <% if devise_mapping.rememberable? -%>
-     <div class="form-group">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="form-group">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 
+  <% if devise_mapping.rememberable? -%>
+    <div class="form-group">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+   
+   <% end %>
+
+  
+    <div class="form-group">
+
+    <%= f.submit "Log in",class: "btn btn-primary"%>
+  </div>
   <% end %>
   </div>
-
-
-
-       <div class="panel-footer">
+  </div>
+  
+ <div class="panel-footer">
 <%= render "devise/shared/links" %>
-        </div>
-      </div>
+   </div>
+   </div>

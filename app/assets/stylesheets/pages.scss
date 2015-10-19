@@ -1,0 +1,48 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#topIndicator-wrapper{
+    width: 100px;
+    position: relative;
+    padding: 0 10px 5px 35px;
+}
+#topIndicator-rectangle{
+    width: 100px;
+    height: 7px;
+    background-color: #fff;
+}
+#topIndicator-triangle{
+    border-color: #fff transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px;
+    height:0;
+    width:0;
+    left: 43px;
+    position: relative;
+}
+ 
+#leftIndicator-wrapper{
+    float: left;
+    height: 100px;
+    width: 15px;
+    top: 10px;
+    display: block;
+    position: relative;
+    padding: 0 10px 5px 0;
+}
+#leftIndicator-rectangle{
+    width: 7px;
+    height: 100px;
+    background-color: #fff;
+}
+#leftIndicator-triangle{
+    border-color: transparent transparent transparent #fff;
+    border-style: solid;
+    border-width: 8px;
+    height:0;
+    width:0;
+    left: 7px;
+    top:42px;
+    position: absolute;
+}

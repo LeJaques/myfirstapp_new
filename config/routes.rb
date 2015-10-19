@@ -2,16 +2,10 @@ Rails.application.routes.draw do
   resources :pins
 
   devise_for :users
-  root "pages#home" 
-  get  "about" => "pages#about" # creates about_path 
-  get  "login" => "pages#login" # creates login_path
+  root "pins#index"
+  get "about" => "pages#about"
 
-  get  "destroy" => "pin#destroy"
-
-  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
-  match 'users/:id' => 'users#show', via: :get, as: :user
-  resources :users
-
+  mount Attachinary::Engine => "/attachinary"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,18 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215000620) do
+ActiveRecord::Schema.define(version: 20150609230742) do
+
+  create_table "attachinary_files", force: :cascade do |t|
+    t.integer  "attachinariable_id"
+    t.string   "attachinariable_type"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
 
   create_table "pins", force: :cascade do |t|
     t.string   "description"
-    t.string   "string"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
@@ -40,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150215000620) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

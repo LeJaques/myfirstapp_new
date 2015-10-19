@@ -1,17 +1,179 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster);
+  @import url('//fonts.googleapis.com/css?family=Calibri');
 
-$body-bg: 									#D5B1A2;
 
-$font-family-sans-serif: 		'Lobster', 'latin';
-$navbar-height:							45px;
-$navbar-default-bg: 				#583A52;
-$navbar-default-brand-color: #E2AB79;
-$brand-primary: 						#AB6361;
-$jumbotron-bg: 							#AF8F8F;
+$body-bg: 								          #E2E2E2;
+
+$font-family-sans-serif: 				 		'Calibri';
+$navbar-height:							      	45px;
+$navbar-default-bg: 					   		whitesmoke;
+$navbar-default-brand-color: 				gray;
+$brand-primary: 						      	#AB6361;
+$right-color:                       #F8F8F8;
+$jumbotron-bg: 							     	  #AF8F8F;
+$icon-font-path: 'bootstrap/';
+
+
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+
+
+.container {
+  width: 93%;
+}
+
+.masonry-brick {
+  border-radius: 15px;
+}
+
+.navbar-default{
+  position: fixed;
+  width: 100%;
+
+
+}
+
+.navbar-brand {
+
+  font-family: 'Calibri';
+  font-size: 34px;
+  font-style: bold;
+  margin-bottom: -5px;
+  padding: 20px;
+}
+
+.nav {
+
+  font-size: 20px;
+  font-style: bold;
+}
+
+.navbar {
+  color: #F8F8F8;
+  height: 100px;
+  box-shadow:  2px 2px 4px 0px rgba(50, 50, 50, 0.14);
+}
+
+.navbar-header {
+  font-color:          #F8F8F8;
+}
+
+.logo{
+  vertical-align: left;
+  margin:  -50px;
+  margin-top:  10px;
+  margin-bottom: -30px;
+}
+
+.name {
+    width: 200px;
+    padding: 20px;
+    margin: -25px;
+}
+
+.margin{
+    margin: 25px;  
+}
+
 .center {
-     text-align: center;
+  text-align: center;
+}
+
+.white, .white a {
+  color: #fff;
+}
+
+.black, .black a {
+  color: #002030;
+}
+
+.glyphicon {
+    font-size: 18px; 
+}
+
+.bottom-aligner {
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+    width:3px;
+  }
+
+.panel{
+  margin-top: 10%;
+
+}
+
+.margin20{
+  margin-top: 5%;
+
+}
+
+
+.panel-default {
+  box-shadow:  1px 1px 1px 0px rgba(50, 50, 50, 0.14);
+  border-radius: 15px 15px 15px 15px;
+}
+
+
+.panel-heading {
+  background-color: #f5f5f5;
+  box-shadow:  1px 1px 1px 0px rgba(50, 50, 50, 0.14);
+}
+
+.panel-body {
+  font-size: 18px; 
+  background-color: white;
+  box-shadow:  1px 1px 1px 0px rgba(50, 50, 50, 0.14);
+
+}
+
+.pin-panel-body {
+  font-size: 18px;
+  padding: 5%;
+  line-height: 1.5;
+  background-color: white;
+  box-shadow:  1px 1px 1px 0px rgba(50, 50, 50, 0.14);
+  border-radius: 0px 0px 15px 15px;
+}
+
+
+.panel-footer {
+  font-size: 18px; 
+  background-color: #f5f5f5;
+  box-shadow:  1px 1px 1px 0px rgba(50, 50, 50, 0.14);
+ 
+}
+
+.btn-warning{
+  font-size: 18px; 
+} 
+
+.btn-primary{
+  font-size: 18px; 
+}
+
+.pagination {
+  font-size: 18px; 
+  bottom: 0;
+  float: bottom;
+  position: absolute;
+  width: auto;
+  margin-bottom: -10%;
+  margin-left: -7%;
+  z-index: 1; 
+
+}
+
+.hoverMask {
+    border-radius: 6px 6px 0 0;
+    bottom: 0;
+    box-shadow: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background 0.04s linear 0s;
+    z-index: 100;
 }
 
 
@@ -23,16 +185,7 @@ $jumbotron-bg: 							#AF8F8F;
   height: 200%;
   z-index: -1;
 }
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
- }
+
 
 #bg2 {
   position: fixed; 
@@ -51,6 +204,18 @@ $jumbotron-bg: 							#AF8F8F;
   margin: auto; 
   min-width: 50%;
   min-height: 50%;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
  }
 
  #bg3 {
@@ -70,19 +235,42 @@ $jumbotron-bg: 							#AF8F8F;
   margin: auto; 
   min-width: 10%;
   min-height: 10%;
-
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
  }
 
 .jumbotron {
- 
-  color: white;
-   text-shadow: #444 0 1px 1px;
-  background-color: transparent;
-       	}
+  
+  color: #8e4d4b;
+  text-shadow: #444 0 3px 3px;
+  background-color: rgba(0,0,0,0.5);
 
-.jumbotron2 {
- 
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 0; 
+}
+
+.jumbotron2 { 
   color: black;
-   text-shadow: #444 0 1px 1px;
+  text-shadow: #444 0 3px 3px;
   background-color: transparent;
-       	}
+}
+ 
+.bring-front {
+   z-index: 1; 
+}
+
+

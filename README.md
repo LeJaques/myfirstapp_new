@@ -1,5 +1,3 @@
-# Myfirstapp
+# One Month Rails
 
-this is my first app created in Ruby in Rails
-
-LeJaques
+This is my first ror application. by Le_Jaques.

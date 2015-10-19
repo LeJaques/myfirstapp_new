@@ -1,14 +1,16 @@
-	<div class="panel panel-default">
-  		<div class="panel-heading">
+<div class="panel-heading">
+<h1>Editing Pin</h1>
+</div>
+<%= render 'form' %>
 
+<div class="panel-footer">
+<%= link_to @pin do %>
+<span class="glyphicon glyphicon-eye-open black"></span>
+	Show
+	<% end %>
 
-<h1>Editing pin</h1>
-
-<%= render 'form' %> <br>
-
-<%= link_to 'Show', @pin %> |
-<%= link_to 'Back', pins_path %>
-
-
-	</div>
-		</div>
+<%= link_to pins_path do %>
+	<span class="glyphicon glyphicon-share black"></span>
+	Back
+	<% end %>
+</div>

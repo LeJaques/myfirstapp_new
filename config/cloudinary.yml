@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: htt53jedq
+  api_key: '923142831563736'
+  api_secret: vZFZN9ifpLzeZVgeZ2rU6k7Rrr8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: htt53jedq
+  api_key: '923142831563736'
+  api_secret: vZFZN9ifpLzeZVgeZ2rU6k7Rrr8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: htt53jedq
+  api_key: '923142831563736'
+  api_secret: vZFZN9ifpLzeZVgeZ2rU6k7Rrr8
+  enhance_image_tag: true
+  static_image_support: false

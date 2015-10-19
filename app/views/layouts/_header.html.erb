@@ -1,30 +1,44 @@
 <nav class="navbar navbar-static-top navbar-default" role="navigation">
-  <div class="container">
+  <div class="container">  
+ 
+
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-ex1-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "PinApp", root_path, class: "navbar-brand" %>
-    </div>
 
- 
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-      <% end %>
+
+    <div class="logo">
       
+     <%= cl_image_tag("https://m2.behance.net/rendition/pm/24633901/disp/e1dfb7e8918ddab4b3549076cade4f7f.png", :width=>40, :crop=>:scale)%>
+     </div>
 
+    <%= link_to "PinApp" , root_path, class: "navbar-brand name"%>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right margin">
+
+        
+        <li><%= link_to raw('<span class="glyphicon glyphicon-home orange"></span>&nbsp;&nbsp;&nbsp;Home'), root_path %></li>        
+        <li><%= link_to raw('<span class="glyphicon glyphicon-info-sign orange"></span>&nbsp;&nbsp;&nbsp;About'), about_path %></li>  
+        <li><%= link_to raw('<span class="glyphicon glyphicon-cog orange"></span>&nbsp;&nbsp;&nbsp;Account Settings'), edit_user_registration_path %></li> 
+        <% if user_signed_in? %>  
+        <li><%= link_to raw('<span class="glyphicon glyphicon-plus orange"></span>&nbsp;&nbsp;&nbsp;New Pin'), new_pin_path %></li> 
+        <li><%= link_to raw('<span class="glyphicon glyphicon-off orange"></span>&nbsp;&nbsp;&nbsp;Log out'), destroy_user_session_path, method: :delete %></li> 
+        <% else %>
+         <li><%= link_to raw('<span class="glyphicon glyphicon-play orange"></span>&nbsp;&nbsp;&nbsp;Sign in'), new_user_session_path %></li> 
+        <% end %> 
       </ul>
-    </div><!-- /.navbar-collapse --> 
-  </div><!-- /.container -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+		
+
+</body>
